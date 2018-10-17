@@ -9,8 +9,8 @@ RUN curl -Lo /tmp/consul_template_0.14.0_linux_amd64.zip https://releases.hashic
     mv consul-template /bin
 
 # get ContainerPilot release
-ENV CONTAINERPILOT_VERSION 3.8.0
-RUN export CP_SHA1=84642c13683ddae6ccb63386e6160e8cb2439c26 \
+ENV CONTAINERPILOT_VERSION 2.7.8
+RUN export CP_SHA1=09158be44c3e887244581d4d019748df9fcfa93c \
     && curl -Lso /tmp/containerpilot.tar.gz \
          "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/containerpilot-${CONTAINERPILOT_VERSION}.tar.gz" \
     && echo "${CP_SHA1}  /tmp/containerpilot.tar.gz" | sha1sum -c \
