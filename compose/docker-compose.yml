@@ -45,7 +45,6 @@ services:
 
   kong-database:
     image: postgres:9.5
-    container_name: kong-database
     environment:
       - POSTGRES_USER=kong
       - POSTGRES_DB=kong
